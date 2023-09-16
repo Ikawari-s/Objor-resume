@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello World</title>
-</head>
-<body>
-Hello World
-</body>
-</html>
+{% extends "header.html" %}
+{% load static %}
+{% block content %}
+	<div class="container-fluid">
+		<section id="landing">
+			<h1>Manese Portfolio Page</h1>
+			<p>Welcome to my portfolio!</p>
+			<img src="{% static 'img/josef.png' %}" id = "profile" alt="Profile Image"> <BR> <BR>
+            <h1>Information About Me</h1>
+		</section>
+        <section id="options">
+        <a href="/about" class = "btn btn-success btn-lg mt-3" id = "button">About</a>
+        <a href="/expertise" class = "btn btn-success btn-lg mt-3" id = "button">Expertise</a>
+        <a href="/resume" class = "btn btn-success btn-lg mt-3" id = "button">Resume</a>
+        <a href="/contact" class = "btn btn-success btn-lg mt-3" id = "button">Contact</a>
+        </section>
+    </div>
+
+{% endblock %}
+

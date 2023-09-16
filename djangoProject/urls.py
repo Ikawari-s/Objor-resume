@@ -25,6 +25,12 @@ from .views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
+    path('header', header, name='header'),
+    path('contact', contact, name='contact'),
+    path('resume', resume, name='resume'),
+    path('expertise', expertise, name='expertise'),
+    path('about', about, name='about'),
+
 ]
 
 if settings.DEBUG:

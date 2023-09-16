@@ -1,0 +1,22 @@
+{% extends "header.html" %}
+{% load static %}
+{% block content %}
+    <div class="text-center">
+    <h1>Contact Page</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div align="center" class="col-sm-6 col-12">
+                <form method="post">
+                    {% for foo in form %}
+                        {{ foo.errors }}
+                        {{ foo }}
+                    {% endfor %}
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
